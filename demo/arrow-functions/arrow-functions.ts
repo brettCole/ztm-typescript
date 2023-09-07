@@ -9,3 +9,36 @@
 // 
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+const sum = function sum(lhs: number, rhs: number): number {
+    return lhs + rhs;
+}
+
+const arrowSum = (lhs: number, rhs: number): number => {
+    return lhs + rhs;
+}
+
+const sub = (lhs: number, rhs: number): number => {
+    return lhs - rhs;
+}
+
+const div = (lhs: number, rhs: number): number => {
+    return lhs / rhs;
+}
+
+const two = sum(1, 1);
+const ten = arrowSum(5, 5);
+
+type calculationFn = (lhs: number, rhs: number) => number;
+
+function calculate(fn: calculationFn, lhs: number, rhs: number): number {
+    const result = fn(lhs, rhs);
+    if (result === 7) {
+        console.log("you win extra!");
+    }
+    return fn(lhs, rhs);
+}
+
+console.log(calculate(arrowSum, 5, 5));
+console.log(calculate(sub, 10, 3));
+console.log(calculate(div, 20, 2));

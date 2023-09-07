@@ -9,3 +9,18 @@
 
 import { strict as assert } from "assert";
 
+function firstName(name:string) {
+    console.log(`${name}`);
+}
+
+function lastName(name:string) {
+    console.log(`${name}`);
+}
+
+function completeName(firstName:string, lastName:string) {
+    console.log(`${firstName} ${lastName}`);
+}
+
+firstName('Brett');
+lastName('Cole');
+completeName('Brett', 'Cole');

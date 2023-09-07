@@ -26,5 +26,18 @@
 // Check your code by changing the age to different values and confirm that the
 // correct messages are displayed.
 
-const age = 25;
+const age = 66;
 
+const canPurchase = (age) => age >= 18 ? console.log('OK to purchase') : console.log('cannot purchase');
+canPurchase(age);
+
+const checkAge = (age) => {
+    if (age < 18) {
+        console.log('child');
+    } else if (age >= 18 && age <= 64) {
+        console.log('adult');
+    } else {
+        console.log('senior');
+    }
+}
+checkAge(age);
